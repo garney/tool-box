@@ -1,0 +1,31 @@
+$standard_easing: cubic-bezier(0.25,0.1,0.25,1.0);
+$bounceScale: 1.125;
+$bounceDuration: 0.3s;
+
+
+@keyframes bounce {
+    0% { transform: scale(1); }
+    50% {transform: scale($bounceScale);}
+	100% {transform: scale(1) } 
+}
+
+.counter {
+    position: relative;
+    display: inline-block;
+
+    &.counting {
+        animation-duration: $bounceDuration;
+        animation-name: bounce;
+        animation-direction: normal;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-timing-function: $standard_easing;
+    }
+}
+	
+
+.component-tester {
+    display: flex;
+    flex-direction: column;
+    color: #333333;
+}

@@ -3,3 +3,4 @@ node_modules
 .idea/shelf/
 .idea/workspace.xml
 .cache
+public
